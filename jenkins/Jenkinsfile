@@ -4,9 +4,6 @@ pipeline {
             image 'maven:3.9.0'
             args '-v /root/.m2:/root/.m2'
         }
-        steps {
-        sh "unset JAVA_HOME && mvn clean install"
-    }
     }
     stages {
         stage('Build') {
